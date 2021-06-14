@@ -6,15 +6,27 @@ using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using System.IO;
 using System.Text.Json;
+using Microsoft.Extensions.Logging;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace LineBotAccountRecorder.Controllers
 {
+
     [Route("api/[controller]")]
     [ApiController]
     public class LineBotController : Controller
     {
+
+        private readonly ILogger<LineBotController> logger = null;
+
+        public LineBotController(
+            ILogger<LineBotController> logger
+            )
+        {
+            this.logger = logger;
+        }
+
         [HttpGet]
         [Route("Chat")]
         public async Task<IActionResult> Get()
@@ -36,6 +48,7 @@ namespace LineBotAccountRecorder.Controllers
                 var userMessage = receivedMessage.events[0].message.text;
                 var replyToken = receivedMessage.events[0].replyToken;
                 Console.WriteLine(userMessage);
+
                 // replyToken what user say
                 //bot.ReplyMessage(replyToken, userMessage);
 
@@ -44,6 +57,7 @@ namespace LineBotAccountRecorder.Controllers
             }
             catch(Exception ex)
             {
+                logger.LogError(ex.ToString());
                 return Ok();
             }
         }
