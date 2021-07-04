@@ -6,4 +6,8 @@
 # 解決無法 using 同個專案的 sub project 問題
 * 表徵：無法透過 using 找到別層的程式碼
 * 解決方法： https://www.skylinetechnologies.com/Blog/Skyline-Blog/February_2018/how-to-use-dot-net-core-cli-create-multi-project
+<<<<<<< HEAD
     * 簡單來說就是透過dotnet add <who_want_to_import.csproj> reference <project_to_import.csproj> 這樣的指令來新增 reference
+=======
+     * 簡單來說就是透過dotnet add <who_want_to_import.csproj> reference <project_to_import.csproj> 這樣的指令來新增 reference
+>>>>>>> doc: update note for project import
