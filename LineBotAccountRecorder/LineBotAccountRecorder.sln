@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05. Infrastructure", "05. I
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06. Testing", "06. Testing", "{170B630A-87EC-4966-84E0-B87AA6364920}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineBotAccountRecorder.Core", "LineBotAccountRecorder.Core\LineBotAccountRecorder.Core.csproj", "{807DD3E4-0177-4F01-B4D0-5D57098AB86B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineBotAccountRecorder.Dal", "LineBotAccountRecorder.Dal\LineBotAccountRecorder.Dal.csproj", "{F603AD9C-1E98-4C95-A78E-B5B691DFBF6E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{6BF5343E-08EC-491C-931A-47D6037A99A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BF5343E-08EC-491C-931A-47D6037A99A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BF5343E-08EC-491C-931A-47D6037A99A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{807DD3E4-0177-4F01-B4D0-5D57098AB86B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{807DD3E4-0177-4F01-B4D0-5D57098AB86B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{807DD3E4-0177-4F01-B4D0-5D57098AB86B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{807DD3E4-0177-4F01-B4D0-5D57098AB86B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F603AD9C-1E98-4C95-A78E-B5B691DFBF6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F603AD9C-1E98-4C95-A78E-B5B691DFBF6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F603AD9C-1E98-4C95-A78E-B5B691DFBF6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F603AD9C-1E98-4C95-A78E-B5B691DFBF6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,5 +48,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6BF5343E-08EC-491C-931A-47D6037A99A4} = {A7ABB233-C520-4754-BAAD-DE9C80F4BDD9}
+		{807DD3E4-0177-4F01-B4D0-5D57098AB86B} = {FB1C1B5B-200E-4832-8B09-16B428C591B3}
+		{F603AD9C-1E98-4C95-A78E-B5B691DFBF6E} = {6BAA80E8-7718-4A65-8989-035CCB7811FF}
 	EndGlobalSection
 EndGlobal
