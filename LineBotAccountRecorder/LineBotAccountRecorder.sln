@@ -5,6 +5,18 @@ VisualStudioVersion = 16.0.809.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineBotAccountRecorder", "LineBotAccountRecorder\LineBotAccountRecorder.csproj", "{6BF5343E-08EC-491C-931A-47D6037A99A4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. Interface", "01. Interface", "{A7ABB233-C520-4754-BAAD-DE9C80F4BDD9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02. Application Service", "02. Application Service", "{D988569E-9920-45DF-92BF-EDB9439EFF69}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03. Domain", "03. Domain", "{F829F27D-C716-4058-834F-1B3B72E1830C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04. Data Access ", "04. Data Access ", "{6BAA80E8-7718-4A65-8989-035CCB7811FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05. Infrastructure", "05. Infrastructure", "{FB1C1B5B-200E-4832-8B09-16B428C591B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06. Testing", "06. Testing", "{170B630A-87EC-4966-84E0-B87AA6364920}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,5 +33,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0305975B-8237-4348-A24D-546726BEF6C1}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6BF5343E-08EC-491C-931A-47D6037A99A4} = {A7ABB233-C520-4754-BAAD-DE9C80F4BDD9}
 	EndGlobalSection
 EndGlobal
