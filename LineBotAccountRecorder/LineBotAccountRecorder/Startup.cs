@@ -33,7 +33,7 @@ namespace LineBotAccountRecorder
             services.AddUnitOfWork();
 
             services.AddDbContext<AccountRecorderDbContext>(options =>
-                options.UseNpgsql("Host=localhost;Port=5432;Database=Postgres;Username=postgres;Password=password"));
+                options.UseNpgsql("Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=password"));
 
             services.AddSwaggerGen(c =>
             {

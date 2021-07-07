@@ -9,6 +9,7 @@
     <Folder Include="Database\" />
     <Folder Include="Repository\" />
     <Folder Include="UnitOfWork\" />
+    <Folder Include="Database\Migrations\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.7" />
@@ -20,5 +21,8 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LineBotAccountRecorder.Core\LineBotAccountRecorder.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Database\Migrations\" />
   </ItemGroup>
 </Project>
