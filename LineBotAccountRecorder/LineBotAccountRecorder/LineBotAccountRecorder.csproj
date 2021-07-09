@@ -8,5 +8,33 @@
     <PackageReference Include="LineBotSDK" Version="2.4.32" />
     <PackageReference Include="NLog" Version="4.7.10" />
     <PackageReference Include="NLog.Web.AspNetCore" Version="4.12.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.4" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.7">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Utils\" />
+    <None Remove="Utils\Extensions\" />
+    <None Remove="Utils\Middleware\" />
+    <None Remove="Utils\Middleware\ExceptionHandlerMiddleware\" />
+    <None Remove="Swashbuckle" />
+    <None Remove="Swashbuckle.AspNetCore" />
+    <None Remove="StyleCop.Analyzers" />
+    <None Remove="Microsoft.EntityFrameworkCore.Design" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utils\" />
+    <Folder Include="Utils\Extensions\" />
+    <Folder Include="Utils\Middleware\" />
+    <Folder Include="Utils\Middleware\ExceptionHandler\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LineBotAccountRecorder.Dal\LineBotAccountRecorder.Dal.csproj" />
   </ItemGroup>
 </Project>
