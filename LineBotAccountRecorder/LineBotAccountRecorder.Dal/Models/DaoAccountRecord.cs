@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace LineBotAccountRecorder.Dal.Models
 {
     [Table("AccountRecords")]
-    public class AccountRecord
+    public class DaoAccountRecord
     {
         [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

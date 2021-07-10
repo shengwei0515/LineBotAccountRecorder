@@ -17,6 +17,6 @@ namespace LineBotAccountRecorder.Dal.Database
         /// <summary>
         /// Member
         /// </summary>
-        public DbSet<AccountRecord> Member { get; set; }
+        public DbSet<DaoAccountRecord> Member { get; set; }
     }
 }
