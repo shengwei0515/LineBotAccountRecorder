@@ -32,6 +32,9 @@ namespace LineBotAccountRecorder
             // add services from IserviceCollectionExtensions
             services.AddUnitOfWork();
 
+            // add servies from Domain
+            services.AddDomainServices();
+
             services.AddDbContext<AccountRecorderDbContext>(options =>
                 options.UseNpgsql("Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=password"));
 

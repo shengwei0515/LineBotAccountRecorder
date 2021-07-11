@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Services\" />
+    <None Remove="Services\AccountRecorder\" />
+    <None Remove="Services\Settle\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Services\AccountRecords\" />
+    <Folder Include="Services\Settle\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LineBotAccountRecorder.Dal\LineBotAccountRecorder.Dal.csproj" />
+    <ProjectReference Include="..\LineBotAccountRecorder.Core\LineBotAccountRecorder.Core.csproj" />
+  </ItemGroup>
+</Project>

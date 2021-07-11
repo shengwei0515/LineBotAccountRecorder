@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineBotAccountRecorder.Core
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineBotAccountRecorder.Dal", "LineBotAccountRecorder.Dal\LineBotAccountRecorder.Dal.csproj", "{F603AD9C-1E98-4C95-A78E-B5B691DFBF6E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineBotAccountRecorder.Domain", "LineBotAccountRecorder.Domain\LineBotAccountRecorder.Domain.csproj", "{7B24942C-ED93-41A9-894B-6B3EFC571E07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{F603AD9C-1E98-4C95-A78E-B5B691DFBF6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F603AD9C-1E98-4C95-A78E-B5B691DFBF6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F603AD9C-1E98-4C95-A78E-B5B691DFBF6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B24942C-ED93-41A9-894B-6B3EFC571E07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B24942C-ED93-41A9-894B-6B3EFC571E07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B24942C-ED93-41A9-894B-6B3EFC571E07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B24942C-ED93-41A9-894B-6B3EFC571E07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,5 +56,6 @@ Global
 		{6BF5343E-08EC-491C-931A-47D6037A99A4} = {A7ABB233-C520-4754-BAAD-DE9C80F4BDD9}
 		{807DD3E4-0177-4F01-B4D0-5D57098AB86B} = {FB1C1B5B-200E-4832-8B09-16B428C591B3}
 		{F603AD9C-1E98-4C95-A78E-B5B691DFBF6E} = {6BAA80E8-7718-4A65-8989-035CCB7811FF}
+		{7B24942C-ED93-41A9-894B-6B3EFC571E07} = {F829F27D-C716-4058-834F-1B3B72E1830C}
 	EndGlobalSection
 EndGlobal

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using LineBotAccountRecorder.Core.Utils.Specification;
 using LineBotAccountRecorder.Dal.Database;
@@ -24,8 +25,12 @@ namespace LineBotAccountRecorder.Dal.Repository
 
         public TEntity FindOne(ISpecification<TEntity> spec)
         {
-            var entity = this.dbContext.Set<TEntity>().Where(spec.SpecExpression).FirstOrDefault();
-            return entity;
+            return this.dbContext.Set<TEntity>().Where(spec.SpecExpression).FirstOrDefault();
+        }
+
+        public IEnumerable<TEntity> Find(ISpecification<TEntity> spec)
+        {
+            return this.dbContext.Set<TEntity>().Where(spec.SpecExpression);
         }
 
         public void Update(TEntity entity)
