@@ -44,5 +44,12 @@ namespace LineBotAccountRecorder.Controllers
         {
             return await this.accountRecordService.FindByAccountStatus((int)EnumAccountRecordStatus.Unckecked);
         }
+
+        [HttpGet]
+        [Route("Settle/uncheck")]
+        public async Task<IEnumerable<DtoSettle>> settleUnckeckasync()
+        {
+            return await this.settleService.TriggerSettle();
+        }
     }
 }

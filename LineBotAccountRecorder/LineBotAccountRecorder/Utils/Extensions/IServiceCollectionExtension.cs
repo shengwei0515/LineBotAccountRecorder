@@ -17,9 +17,8 @@ namespace LineBotAccountRecorder.Utils.Extensions
 
         public static IServiceCollection AddDomainServices(this IServiceCollection services)
         {
-            services.AddScoped<AccountRecordService, AccountRecordService>();
             services.AddScoped<SettleService, SettleService>();
-
+            services.AddScoped<AccountRecordService, AccountRecordService>();
             return services;
         }
     }

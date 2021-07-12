@@ -36,8 +36,7 @@ namespace LineBotAccountRecorder.Domain.AccountRecords
 
             var recordEntities = this.uow.Repository<AccountRecord>().Find(specAccountRecord);
 
-            IEnumerable<AccountRecord> records = await Task.FromResult(recordEntities);
-            return records;
+            return recordEntities;
         }
     }
 }
