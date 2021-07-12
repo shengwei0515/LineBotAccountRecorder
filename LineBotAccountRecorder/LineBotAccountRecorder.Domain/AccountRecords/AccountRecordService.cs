@@ -6,7 +6,7 @@ using LineBotAccountRecorder.Dal.Models;
 using LineBotAccountRecorder.Dal.UnitOfWork;
 using Microsoft.Extensions.Logging;
 
-namespace LineBotAccountRecorder.Domain.Services.AccountRecords
+namespace LineBotAccountRecorder.Domain.AccountRecords
 {
     public class AccountRecordService
     {

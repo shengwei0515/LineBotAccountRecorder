@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace LineBotAccountRecorder.Domain.Services.AccountRecords
+namespace LineBotAccountRecorder.Domain.AccountRecords
 {
     public enum EnumAccountRecordStatus
     {

@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using LineBotAccountRecorder.Dal.Models;
-using LineBotAccountRecorder.Domain.Services.AccountRecords;
-using LineBotAccountRecorder.Domain.Services.Settle;
+using LineBotAccountRecorder.Domain.Settle;
+using LineBotAccountRecorder.Domain.AccountRecords;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 

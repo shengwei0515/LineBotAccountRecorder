@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace LineBotAccountRecorder.Domain.Services.Settle
+namespace LineBotAccountRecorder.Domain.Settle
 {
     public class DtoSettle
     {

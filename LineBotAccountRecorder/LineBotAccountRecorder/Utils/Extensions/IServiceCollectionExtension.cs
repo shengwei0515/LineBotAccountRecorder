@@ -1,7 +1,7 @@
 ﻿using System;
 using LineBotAccountRecorder.Dal.UnitOfWork;
-using LineBotAccountRecorder.Domain.Services.AccountRecords;
-using LineBotAccountRecorder.Domain.Services.Settle;
+using LineBotAccountRecorder.Domain.AccountRecords;
+using LineBotAccountRecorder.Domain.Settle;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace LineBotAccountRecorder.Utils.Extensions

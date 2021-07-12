@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 using LineBotAccountRecorder.Core.Utils.Specification;
 using LineBotAccountRecorder.Dal.Models;
 
-namespace LineBotAccountRecorder.Domain.Services.AccountRecords
+namespace LineBotAccountRecorder.Domain.AccountRecords
 {
     public class SpecAccountRecordStatus : SpecificationBase<AccountRecord>
     {

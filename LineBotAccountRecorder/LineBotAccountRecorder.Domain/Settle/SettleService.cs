@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using LineBotAccountRecorder.Core.Utils.Specification;
 using LineBotAccountRecorder.Dal.Models;
 using LineBotAccountRecorder.Dal.UnitOfWork;
-using LineBotAccountRecorder.Domain.Services.AccountRecords;
+using LineBotAccountRecorder.Domain.AccountRecords;
 using Microsoft.Extensions.Logging;
 
-namespace LineBotAccountRecorder.Domain.Services.Settle
+namespace LineBotAccountRecorder.Domain.Settle
 {
     public class SettleService
     {
