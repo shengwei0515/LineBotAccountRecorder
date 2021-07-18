@@ -7,3 +7,7 @@
 * 表徵：無法透過 using 找到別層的程式碼
 * 解決方法： https://www.skylinetechnologies.com/Blog/Skyline-Blog/February_2018/how-to-use-dot-net-core-cli-create-multi-project
     * 簡單來說就是透過dotnet add <who_want_to_import.csproj> reference <project_to_import.csproj> 這樣的指令來新增 reference
+
+# C sharp line bot not
+* http://studyhost.blogspot.com/2017/01/linebot8-template-message.html
+* https://github.com/isdaviddong/LineBotSdkExample/tree/master/LineBotSdkExample
