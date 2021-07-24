@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="LineBot\" />
+    <None Remove="EventFilter\" />
+    <None Remove="LineBotSDK" />
+    <None Remove="MessageCommand\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LineBotWebhook\" />
+    <Folder Include="WebhookEventFilter\" />
+    <Folder Include="CommandMessage\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="LineBotSDK" Version="2.4.32" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LineBotAccountRecorder.Core\LineBotAccountRecorder.Core.csproj" />
+  </ItemGroup>
+</Project>

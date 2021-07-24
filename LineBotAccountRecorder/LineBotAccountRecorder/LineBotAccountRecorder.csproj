@@ -27,14 +27,12 @@
     <None Remove="Swashbuckle.AspNetCore" />
     <None Remove="StyleCop.Analyzers" />
     <None Remove="Microsoft.EntityFrameworkCore.Design" />
-    <None Remove="Models\Dto\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Utils\" />
     <Folder Include="Utils\Extensions\" />
     <Folder Include="Utils\Middleware\" />
     <Folder Include="Utils\Middleware\ExceptionHandler\" />
-    <Folder Include="Models\Dto\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LineBotAccountRecorder.Dal\LineBotAccountRecorder.Dal.csproj" />
@@ -42,5 +40,6 @@
     <ProjectReference Include="..\LineBotAccountRecorder.Core\LineBotAccountRecorder.Core.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
+    <ProjectReference Include="..\LineBotAccountRecorder.Service\LineBotAccountRecorder.Service.csproj" />
   </ItemGroup>
 </Project>

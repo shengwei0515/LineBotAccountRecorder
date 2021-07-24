@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LineBotAccountRecorder.Core.Models;
 using LineBotAccountRecorder.Dal.Database;
 using LineBotAccountRecorder.Utils.Extensions;
 using Microsoft.AspNetCore.Builder;
@@ -17,9 +18,14 @@ namespace LineBotAccountRecorder
 {
     public class Startup
     {
+
+        private readonly AppSettings appSettings = null;
+
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            this.Configuration = configuration;
+            this.appSettings = new AppSettings();
+            this.Configuration.Bind(this.appSettings);
         }
 
         public IConfiguration Configuration { get; }
@@ -27,12 +33,18 @@ namespace LineBotAccountRecorder
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.AddControllersWithViews();
+
+            services.Configure<AppSettings>(this.Configuration);
 
             // add services from IserviceCollectionExtensions
             services.AddUnitOfWork();
 
-            // add servies from Domain
+            // add services from Service
+            services.AddServiceServices();
+
+            // add services from Domain
             services.AddDomainServices();
 
             services.AddDbContext<AccountRecorderDbContext>(options =>
