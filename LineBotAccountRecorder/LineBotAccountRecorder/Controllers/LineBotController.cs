@@ -7,6 +7,7 @@ using System.Net;
 using System.IO;
 using System.Text.Json;
 using Microsoft.Extensions.Logging;
+using LineBotAccountRecorder.Service.CommandMessage;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -19,12 +20,15 @@ namespace LineBotAccountRecorder.Controllers
     {
 
         private readonly ILogger<LineBotController> logger = null;
+        private readonly CommandMessageFilterBase commandFilter = null;
 
         public LineBotController(
-            ILogger<LineBotController> logger
+            ILogger<LineBotController> logger,
+            CommandMessageFilterBase commandFilter
             )
         {
             this.logger = logger;
+            this.commandFilter = commandFilter;
         }
 
         [HttpGet]
@@ -45,14 +49,11 @@ namespace LineBotAccountRecorder.Controllers
             {
                 //Console.WriteLine(requestJson);
                 var receivedMessage = isRock.LineBot.Utility.Parsing(requestJson.ToString());
-                var userMessage = receivedMessage.events[0].message.text;
+                var userMessage = "你說了: " + receivedMessage.events[0].message.text;
                 var replyToken = receivedMessage.events[0].replyToken;
-                Console.WriteLine(userMessage);
+                this.commandFilter.SetupKeyword("測試");
+                this.commandFilter.Filter(userMessage);
 
-                // replyToken what user say
-                //bot.ReplyMessage(replyToken, userMessage);
-
-                isRock.LineBot.Utility.ReplyMessage(replyToken, userMessage, channelAccessToken);
                 return Ok();
             }
             catch(Exception ex)

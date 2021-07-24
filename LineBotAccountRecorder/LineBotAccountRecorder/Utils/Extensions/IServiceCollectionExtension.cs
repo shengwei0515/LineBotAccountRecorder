@@ -21,6 +21,7 @@ namespace LineBotAccountRecorder.Utils.Extensions
         public static IServiceCollection AddServiceServices(this IServiceCollection services)
         {
             services.AddSingleton<CommandRegexFactory, CommandRegexFactory>();
+            services.AddSingleton<CommandMessageFilterBase, CommandMessageFilterBase>();
             return services;
         }
 
