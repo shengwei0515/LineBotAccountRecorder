@@ -4,19 +4,21 @@ using Microsoft.Extensions.Logging;
 
 namespace LineBotAccountRecorder.Service.CommandMessage
 {
-    public class CommandMessageFilterBase
+    public abstract class CommandMessageFilterBase
     {
-        private readonly ILogger<CommandMessageFilterBase> logger = null;
         private readonly CommandRegexFactory regexFactory = null;
-        private readonly String[] commandArgList = new string[] { };
+        private String[] commandArgList = new string[] { };
         private Regex commandRegex = null;
 
         public CommandMessageFilterBase(
-            ILogger<CommandMessageFilterBase> logger,
             CommandRegexFactory regexFactory)
         {
-            this.logger = logger;
             this.regexFactory = regexFactory;
+        }
+
+        protected void SetupAtgList(string[] argList)
+        {
+            this.commandArgList = argList;
         }
 
         public void SetupKeyword(string commandKeyword)
@@ -24,23 +26,23 @@ namespace LineBotAccountRecorder.Service.CommandMessage
             this.commandRegex = this.regexFactory.CreatWithKeywordAndArgList(commandKeyword, this.commandArgList);
         }
 
-        protected Match MatchMessage(string message)
+        protected Match MatchMessage(isRock.LineBot.ReceivedMessage receivedMessage)
         {
+            string message = receivedMessage.events[0].message.text;
             return this.commandRegex.Match(message);
         }
 
-
-        public void Filter(string message)
+        virtual public void Filter(isRock.LineBot.ReceivedMessage receivedMessage)
         {
-            Match match = this.MatchMessage(message);
+            Match match = this.MatchMessage(receivedMessage);
             if (!match.Success)
             {
-                this.logger.LogInformation("Message Match Note Match");
+                Console.WriteLine("Message Match Note Match");
                 return;
             }
             else
             {
-                this.logger.LogInformation("Message Match Suyccess");
+                Console.WriteLine("Message Match Suyccess");
                 return;
             }
         }

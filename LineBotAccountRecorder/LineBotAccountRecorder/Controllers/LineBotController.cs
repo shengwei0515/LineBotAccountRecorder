@@ -7,7 +7,7 @@ using System.Net;
 using System.IO;
 using System.Text.Json;
 using Microsoft.Extensions.Logging;
-using LineBotAccountRecorder.Service.CommandMessage;
+using LineBotAccountRecorder.Service.LineBotWebhook;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -20,22 +20,22 @@ namespace LineBotAccountRecorder.Controllers
     {
 
         private readonly ILogger<LineBotController> logger = null;
-        private readonly CommandMessageFilterBase commandFilter = null;
+        private readonly LineBotWebhookHandler lineBotWebhookHandler = null;
 
         public LineBotController(
             ILogger<LineBotController> logger,
-            CommandMessageFilterBase commandFilter
+            LineBotWebhookHandler lineBotWebhookHandler
             )
         {
             this.logger = logger;
-            this.commandFilter = commandFilter;
+            this.lineBotWebhookHandler = lineBotWebhookHandler;
         }
 
         [HttpGet]
         [Route("Chat")]
         public async Task<IActionResult> Get()
         {
-            return Ok();
+            return this.Ok();
         }
 
         [HttpPost]
@@ -47,19 +47,15 @@ namespace LineBotAccountRecorder.Controllers
 
             try
             {
-                //Console.WriteLine(requestJson);
-                var receivedMessage = isRock.LineBot.Utility.Parsing(requestJson.ToString());
-                var userMessage = "你說了: " + receivedMessage.events[0].message.text;
-                var replyToken = receivedMessage.events[0].replyToken;
-                this.commandFilter.SetupKeyword("測試");
-                this.commandFilter.Filter(userMessage);
-
-                return Ok();
+                isRock.LineBot.ReceivedMessage receivedMessage = isRock.LineBot.Utility.Parsing(requestJson.ToString());
+                this.logger.LogInformation(requestJson.ToString());
+                this.lineBotWebhookHandler.Process(receivedMessage);
+                return this.Ok();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                logger.LogError(ex.ToString());
-                return Ok();
+                this.logger.LogError(ex.ToString());
+                return this.Ok();
             }
         }
     }

@@ -1,12 +1,13 @@
 ﻿using System;
 using isRock.LineBot;
+using Microsoft.Extensions.Logging;
 
 namespace LineBotAccountRecorder.Service.WebhookEventFilter
 {
     public abstract class WebhookEventFilterBase
     {
 
-        private string eventType;
+        protected readonly string eventType = null;
 
         public WebhookEventFilterBase(string eventType)
         {
